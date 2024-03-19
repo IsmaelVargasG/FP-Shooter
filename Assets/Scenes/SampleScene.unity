@@ -466,7 +466,7 @@ MonoBehaviour:
   - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
   - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
   - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
-  spawnInterval: 2
+  spawnInterval: 5
   spawnRadius: 10
 --- !u!4 &702533887
 Transform:
@@ -939,7 +939,7 @@ MonoBehaviour:
   - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
   - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
   - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
-  spawnInterval: 2
+  spawnInterval: 5
   spawnRadius: 10
 --- !u!4 &1038514612
 Transform:
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
   - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
   - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
-  spawnInterval: 2
+  spawnInterval: 5
   spawnRadius: 10
 --- !u!4 &1701882163
 Transform:
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
   - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
   - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
-  spawnInterval: 2
+  spawnInterval: 10
   spawnRadius: 10
 --- !u!4 &1874395291
 Transform:

@@ -13,15 +13,12 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 2f;
     public float spawnRadius = 30f;
 
-    private Transform playerTransform;
-    private NavMeshSurface navMeshSurface;
 
     private float spawnTimer;
 
     void Start()
     {
         spawnTimer = spawnInterval;
-        navMeshSurface = FindObjectOfType<NavMeshSurface>();
         currentEnemies = 0;
         gestionVidas.onDeadEnemy += EnemigoMuerto;
     }
@@ -30,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
 
-        if (spawnTimer <= 0f && currentEnemies < maxEnemies)
+        if (spawnTimer <= 0f && currentEnemies <= maxEnemies)
         {
             currentEnemies++;
             SpawnEnemy();

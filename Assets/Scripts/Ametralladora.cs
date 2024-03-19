@@ -23,7 +23,7 @@ public class Ametralladora : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= proximoDisparo && Input.GetMouseButton(0)){
+        if(Time.time >= proximoDisparo && Input.GetMouseButtonDown(0)){
             proximoDisparo = Time.time + tiempoDeEspera;
 
             audioSource.Play();
