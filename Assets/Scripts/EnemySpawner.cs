@@ -7,7 +7,8 @@ using Unity.AI.Navigation;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int maxEnemies = 12;
+    public int maxEnemies = 10;
+    private int currentEnemies;
     public GameObject[] enemyPrefabs;
     public float spawnInterval = 2f;
     public float innerRadius = 25f;
@@ -23,14 +24,17 @@ public class EnemySpawner : MonoBehaviour
         spawnTimer = spawnInterval;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshSurface = FindObjectOfType<NavMeshSurface>();
+        currentEnemies = 0;
+        gestionVidas.onDeadEnemy += EnemigoMuerto;
     }
 
     void Update()
     {
         spawnTimer -= Time.deltaTime;
 
-        if (spawnTimer <= 0f)
+        if (spawnTimer <= 0f && currentEnemies < maxEnemies)
         {
+            currentEnemies++;
             SpawnEnemy();
             spawnTimer = spawnInterval;
         }
@@ -55,5 +59,9 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.LogWarning("Failed to find a valid spawn point within the NavMesh near the player.");
         }
+    }
+
+    void EnemigoMuerto(){
+        currentEnemies--;
     }
 }

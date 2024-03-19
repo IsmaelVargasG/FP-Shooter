@@ -11,11 +11,17 @@ public class gestionVidas : MonoBehaviour
     public UnityEvent heSidoTocado;
     public UnityEvent muelto;
 
+    public delegate void OnDeadEnemy();
+    public static event OnDeadEnemy onDeadEnemy;
+
     void tocado(float daño){
         vida -= daño;
         heSidoTocado.Invoke();
         if(vida <= 0){
             muelto.Invoke();
+            if(onDeadEnemy != null){
+                onDeadEnemy();
+            }
         }
     }
 }
