@@ -7,17 +7,19 @@ using Unity.AI.Navigation;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int maxEnemies;
-    private int currentEnemies;
+    public static int maxEnemies;
+    private static int currentEnemies;
     public GameObject[] enemyPrefabs;
     public float spawnInterval = 2f;
     public float spawnRadius = 30f;
+    bool flag = false;
 
 
     private float spawnTimer;
 
     void Start()
     {
+        maxEnemies = 20;
         spawnTimer = spawnInterval;
         currentEnemies = 0;
         gestionVidas.onDeadEnemy += EnemigoMuerto;
@@ -27,9 +29,12 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
 
-        if (spawnTimer <= 0f && currentEnemies <= maxEnemies)
+        if(currentEnemies == maxEnemies){flag = true;}
+        if (spawnTimer <= 0f && currentEnemies < maxEnemies)
         {
-            currentEnemies++;
+            if(flag == true){currentEnemies += 4;}
+            else{currentEnemies++;}
+
             SpawnEnemy();
             spawnTimer = spawnInterval;
         }

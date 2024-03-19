@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     public Image imgBarraVida;
     public Canvas barraVida;
     private float x;
+    public Camera skyview;
+    public Canvas interfaz;
+    public Canvas gameOver;
 
     public delegate void OnDeadPlayer();
     public static event OnDeadPlayer onDeadPlayer;
@@ -29,7 +32,12 @@ public class Player : MonoBehaviour
         if(onDeadPlayer != null){
             onDeadPlayer();
         }
+        skyview.enabled = true;
+        interfaz.enabled = false;
+        gameOver.enabled = true;
+
         Destroy(gameObject);
-        EditorApplication.isPlaying = false;
+        Debug.Break();
+        /* EditorApplication.isPlaying = false; */
     }
 }

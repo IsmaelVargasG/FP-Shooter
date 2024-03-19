@@ -400,6 +400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  puntos: 10
+  aggroDist: 50
   imgBarraVida: {fileID: 8855792464413275645}
   barraVida: {fileID: 5504340546095950101}
 --- !u!114 &7242856912647861826
