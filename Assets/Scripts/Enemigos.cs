@@ -7,10 +7,13 @@ using UnityEngine.AI;
 public class Enemigos : MonoBehaviour
 {
 
-    public float movementInterval = 0.16f;
+    public float damage;
+    private float nextAttackTime = 0f;
+    private float timeBetweenAttacks = 1.5f;
+    private float attackRange = 3f;
     private NavMeshAgent pathfinder;
     private Transform target;
-    private float movementTimer;
+    private GameObject player;
     private Camera playerCam;
     private bool bfinPartida;
 
@@ -22,9 +25,9 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        target = player.transform;
         pathfinder = GetComponent<NavMeshAgent>();
-        movementTimer = movementInterval;
         pathfinder.SetDestination(target.position);
         playerCam = Camera.main;
         bfinPartida = false;
@@ -36,15 +39,17 @@ public class Enemigos : MonoBehaviour
     void Update()
     {
         if(!bfinPartida){
-            movementTimer -= Time.deltaTime;
-            if(movementTimer < 0){
-                pathfinder.SetDestination(target.position);
-                movementTimer = movementInterval;
-            }
-
-
             pathfinder.SetDestination(target.position);
             barraVida.transform.LookAt(playerCam.transform.position, Vector3.up);
+        
+            if (Time.time >= nextAttackTime){
+                nextAttackTime = Time.time + timeBetweenAttacks;
+                float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+                if(distanceToPlayer <= attackRange){
+                    player.SendMessage("tocado", damage, SendMessageOptions.DontRequireReceiver);
+                    Debug.Log("Daño recibido: " + damage + " Vida restatnte: " + player.GetComponent<gestionVidas>().vida);
+                }
+            } 
         }
     }
 

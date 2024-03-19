@@ -432,6 +432,57 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &702533885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702533887}
+  - component: {fileID: 702533886}
+  m_Layer: 0
+  m_Name: Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &702533886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702533885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd999ddd542bb054cac8e08bbb7c1f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 5
+  enemyPrefabs:
+  - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
+  - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
+  - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
+  spawnInterval: 2
+  spawnRadius: 10
+--- !u!4 &702533887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702533885}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300.3, y: 23.06, z: 86.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +905,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1038514610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038514612}
+  - component: {fileID: 1038514611}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1038514611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038514610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd999ddd542bb054cac8e08bbb7c1f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 4
+  enemyPrefabs:
+  - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
+  - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
+  - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
+  spawnInterval: 2
+  spawnRadius: 10
+--- !u!4 &1038514612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038514610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 334.62, y: 28.48, z: 260.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1067108120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1042,6 +1144,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698890009}
   m_CullTransparentMesh: 1
+--- !u!1 &1701882161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701882163}
+  - component: {fileID: 1701882162}
+  m_Layer: 0
+  m_Name: Spawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1701882162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701882161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd999ddd542bb054cac8e08bbb7c1f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 6
+  enemyPrefabs:
+  - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
+  - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
+  - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
+  spawnInterval: 2
+  spawnRadius: 10
+--- !u!4 &1701882163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701882161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 115.71, y: 17.6, z: 91.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735535577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,13 +1457,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd999ddd542bb054cac8e08bbb7c1f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 10
+  maxEnemies: 4
   enemyPrefabs:
   - {fileID: 9096565073106658962, guid: eee92ea4fa82cf749bc83a5716049738, type: 3}
   - {fileID: 3928069213997945868, guid: 2b93a6d5ef14d8b4da28c33953420536, type: 3}
   - {fileID: 259354855851114478, guid: ee36feafa5835684db0fe46c0809a369, type: 3}
   spawnInterval: 2
-  innerRadius: 25
   spawnRadius: 10
 --- !u!4 &1874395291
 Transform:
@@ -1321,7 +1473,7 @@ Transform:
   m_GameObject: {fileID: 1874395289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 280.5, y: 22.715342, z: 290.0424}
+  m_LocalPosition: {x: 280.5, y: 22.28, z: 290.0424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1593,3 +1745,6 @@ SceneRoots:
   - {fileID: 1020722676}
   - {fileID: 1735535579}
   - {fileID: 1874395291}
+  - {fileID: 1038514612}
+  - {fileID: 702533887}
+  - {fileID: 1701882163}

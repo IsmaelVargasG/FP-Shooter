@@ -7,12 +7,11 @@ using Unity.AI.Navigation;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int maxEnemies = 10;
+    public int maxEnemies;
     private int currentEnemies;
     public GameObject[] enemyPrefabs;
     public float spawnInterval = 2f;
-    public float innerRadius = 25f;
-    public float spawnRadius = 50f;
+    public float spawnRadius = 30f;
 
     private Transform playerTransform;
     private NavMeshSurface navMeshSurface;
@@ -22,7 +21,6 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         spawnTimer = spawnInterval;
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshSurface = FindObjectOfType<NavMeshSurface>();
         currentEnemies = 0;
         gestionVidas.onDeadEnemy += EnemigoMuerto;
@@ -44,20 +42,20 @@ public class EnemySpawner : MonoBehaviour
     {
         GameObject randomEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-        Vector3 randomOffset = Vector3.one * innerRadius + Random.insideUnitSphere * spawnRadius;
+        Vector3 randomOffset =  Random.insideUnitSphere * spawnRadius;
         randomOffset.y = 0f;
-        Vector3 spawnPosition = playerTransform.position + randomOffset;
+        Vector3 spawnPosition = transform.position + randomOffset;
 
 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(spawnPosition, out hit, innerRadius+spawnRadius, NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(spawnPosition, out hit, spawnRadius, NavMesh.AllAreas))
         {
             spawnPosition = hit.position;
             Instantiate(randomEnemyPrefab, spawnPosition, Quaternion.identity);
         }
         else
         {
-            Debug.LogWarning("Failed to find a valid spawn point within the NavMesh near the player.");
+            Debug.LogWarning("Failed to find a valid spawn point within the NavMesh.");
         }
     }
 
